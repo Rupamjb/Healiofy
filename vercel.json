@@ -1,0 +1,12 @@
+{
+  "buildCommand": "npm run build:vercel",
+  "installCommand": "npm run install:all",
+  "framework": "vite",
+  "outputDirectory": "heal/dist",
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "server/server.js"
+    }
+  ]
+} 

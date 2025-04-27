@@ -1,0 +1,26 @@
+{
+  "name": "healiofy",
+  "version": "1.0.0",
+  "description": "Healthcare platform with prescription analysis and consultations",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd server && npm run start\" \"cd heal && npm run dev\"",
+    "dev": "npm run start-server ; npm run start-client",
+    "start-server": "cd server && npm run dev",
+    "start-client": "cd heal && npm run dev",
+    "install:all": "npm install && cd server && npm install && cd ../heal && npm install",
+    "build": "cd heal && npm run build",
+    "build:vercel": "cd server && npm install && cd ../heal && npm install && npm run build"
+  },
+  "keywords": [
+    "healthcare",
+    "telemedicine",
+    "prescription",
+    "consultation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 
