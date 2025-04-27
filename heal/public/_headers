@@ -1,0 +1,49 @@
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: no-referrer-when-downgrade
+  
+/js/*
+  Content-Type: application/javascript
+  X-Content-Type-Options: nosniff
+
+/*.js
+  Content-Type: application/javascript
+  X-Content-Type-Options: nosniff
+
+/*.css
+  Content-Type: text/css
+  X-Content-Type-Options: nosniff
+
+/*.svg
+  Content-Type: image/svg+xml
+  X-Content-Type-Options: nosniff
+
+/*.json
+  Content-Type: application/json
+  X-Content-Type-Options: nosniff
+
+/*.png
+  Content-Type: image/png
+
+/*.jpg
+  Content-Type: image/jpeg
+
+/*.jpeg
+  Content-Type: image/jpeg
+
+/*.ico
+  Content-Type: image/x-icon
+
+/*.webp
+  Content-Type: image/webp
+
+/*.woff2
+  Content-Type: font/woff2
+
+/*.woff
+  Content-Type: font/woff
+
+/*.ttf
+  Content-Type: font/ttf 

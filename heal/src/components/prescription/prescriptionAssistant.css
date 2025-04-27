@@ -1,0 +1,84 @@
+/* Chat message formatting */
+.chat-message-formatted {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.chat-message-formatted strong {
+  font-weight: 600;
+  color: #1a56db;
+}
+
+.chat-message-formatted em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.chat-message-formatted p {
+  margin-bottom: 0.75rem;
+}
+
+.chat-message-formatted p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-message-formatted ul, 
+.chat-message-formatted ol {
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.chat-message-formatted ul li, 
+.chat-message-formatted ol li {
+  margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.chat-message-formatted ul {
+  list-style-type: disc;
+}
+
+.chat-message-formatted ol {
+  list-style-type: decimal;
+}
+
+/* Better spacing for message content */
+.message-content {
+  line-height: 1.5;
+}
+
+/* Styling for AI generated content */
+.bg-gradient-to-r.from-blue-50.to-indigo-50 .chat-message-formatted strong {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.bg-gradient-to-r.from-blue-50.to-indigo-50 .chat-message-formatted ul li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: #3b82f6;
+}
+
+/* Improved typography for message titles */
+.message-title {
+  font-weight: 600;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+/* Special formatting for warnings and important information */
+.chat-message-formatted .warning {
+  color: #b91c1c;
+  font-weight: 500;
+}
+
+.chat-message-formatted .info {
+  color: #0369a1;
+  font-weight: 500;
+}
+
+/* Better styling for empty space between paragraphs */
+.chat-message-formatted .h-2 {
+  height: 0.5rem;
+} 
