@@ -99,7 +99,17 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     // Reset prescription state
     prescription.clearPrescriptionState();
     
+    // Clear all application-related localStorage items
+    localStorage.removeItem('healiofy_chat_messages');
+    localStorage.removeItem('healiofy_chat_history');
+    localStorage.removeItem('healiofy_chat_context');
+    localStorage.removeItem('pendingAppointmentOperations');
+    localStorage.removeItem('cachedAppointments');
+    localStorage.removeItem('successfulAppointmentEndpoint');
+    
+    // Call the auth service logout to clear user and token
     authService.logout();
+    
     setAuthState({
       user: null,
       token: null,
