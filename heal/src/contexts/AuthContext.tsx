@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import * as authService from "../services/authService";
 import { useNavigate } from 'react-router-dom';
 import { useLoading } from "./LoadingContext";
+import { usePrescription } from "./PrescriptionContext";
 
 interface User {
   id: string;
@@ -44,6 +45,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const { startLoading, stopLoading } = useLoading();
+  const prescription = usePrescription();
 
   useEffect(() => {
     // Initialize auth state from localStorage on mount
@@ -93,6 +95,9 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const logout = () => {
     // Show a short loading indicator on logout
     startLoading();
+    
+    // Reset prescription state
+    prescription.clearPrescriptionState();
     
     authService.logout();
     setAuthState({
